@@ -1,0 +1,1033 @@
+/*
+Theme Name: builddoctor
+Theme URI: 
+Description: 
+Version: 1.0
+Author: Gayane Aghababyan
+Author URI:
+Tags:
+
+This theme was designed and built Gayane Aghababyan.
+
+The CSS, XHTML and design is released under GPL:
+http://www.opensource.org/licenses/gpl-license.php
+*/
+
+/**Start Reset*********************************/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+
+img { 
+ behavior: url(iepngfix.htc); 
+}
+
+blockquote, q {
+padding-left: 23px;
+background: transparent url(images/quote.png) no-repeat;
+padding-top: 10px;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/**End Reset*********************************/
+
+/*Utility Styles************************/
+.alignright {
+	float:right;
+}
+.alignleft {
+	float:left;
+}
+.aligncenter {
+	display:block;
+	margin:0 auto;
+}
+
+body {
+font-family: arial, Helvetica,sans-serif;
+font-size: 12px;
+}
+
+#wrapper {
+width: 1000px;
+margin: 0 auto;
+}
+
+#header {
+height: 170px;
+margin-top: 10px;
+}
+
+#header-links {
+float:right;
+}
+
+#header-links li {
+float:left;
+}
+
+#menu-item-4 {
+padding-right: 25px;
+}
+
+#menu-item-7 {
+padding-left: 25px;
+padding-right: 25px;
+border-left: 1px solid #cccccc;
+border-right: 1px solid #cccccc;
+}
+
+#menu-item-10 {
+padding-left: 25px;
+}
+
+#header-links li {
+font-size: 18px;
+}
+
+#header-links a {
+color:#333333;
+text-decoration:none;
+font-weight: bold;
+}
+
+#header-links a:hover {
+color:#cc0000;
+text-decoration:underline;
+}
+
+#header li.current_page_item a{
+   color:#3399cc;
+   text-decoration:none;
+}
+
+#logo {
+padding-top: 40px;
+width: 215px;
+float: left;
+}
+
+.description {
+float: left;
+padding-top: 20px;
+padding-left: 30px;
+font-weight: bold;
+width: 750px;
+}
+
+.description h2 {
+color: #39C;
+font-size: 21px;
+}
+
+.description h3 {
+text-transform: uppercase;
+font-size: 2.2em;
+color: #C00;
+padding-top: 35px;
+}
+
+.get-in-touch {
+margin-top: -40px;
+clear: both;
+float: right;
+background-image:url('images/get-in-touch.png');
+background-repeat:no-repeat;
+width:225px;
+height:56px;
+}
+
+.get-in-touch ul {
+width: 225px;
+}
+
+.get-in-touch a {
+display: block;
+width: 225px;
+height: 56px;
+text-indent: -9999px;
+}
+
+#header-separator {
+margin-bottom: -220px;
+clear: both;
+height: 3px;
+background-color: black;
+}
+
+#main-content {
+padding-top: 220px;
+}
+
+#content {
+clear: both;
+width: 650px;
+float: left;
+}
+
+.slider-button {
+margin-top: -60px;
+margin-left: 430px;
+}
+
+.about-box {
+margin-top:10px;
+background-color:#000000;
+-moz-border-radius: 10px; /* Firefox */
+-webkit-border-radius: 10px; /* Safari, Chrome */
+border-radius: 10px; /* CSS3 */
+behavior: url('border-radius.htc');
+width: 615px;
+color: white;
+padding: 15px;
+font-size: 19px;
+}
+
+.about-box h2 {
+font-weight: normal;
+padding-bottom: 25px;
+}
+
+.about-box p {
+font-weight: normal;
+}
+
+.blog-box {
+width: 645px;
+padding-top: 40px;
+}
+
+.entry {
+width: 250px;
+float: left;
+padding-right: 45px;
+padding-bottom: 50px;
+padding-left: 25px;
+height: 144px;
+}
+
+.entry h2 {
+font-size: 27px;
+padding-bottom:20px;
+}
+
+.entry a {
+color: #39C;
+text-decoration: none;
+}
+
+.entry p {
+color: #333;
+font-size:19px;
+}
+
+.blog-title-separator-1 {
+width: 2px;
+height: 144px;
+background-image: url('images/blog-title-separator.png');
+background-repeat: no-repeat;
+position: absolute;
+margin-left: 305px;
+margin-top: 50px;
+display: inline;
+}
+
+.blog-title-separator-2 {
+width: 2px;
+height: 144px;
+background-image: url('images/blog-title-separator.png');
+background-repeat: no-repeat;
+position: absolute;
+margin-left: 305px;
+margin-top: 245px;
+display: inline;
+}
+
+.post {
+margin-top: 30px;
+padding-left: 20px;
+line-height: 1.5;
+}
+
+.post a {
+color: #09C;
+}
+
+.post a:hover {
+text-decoration:none;
+}
+
+.post h2 {
+color: #3399DC;
+font-size: 14px;
+padding-bottom: 15px;
+}
+
+.post ul {
+padding-left: 20px;
+padding-bottom: 10px;
+}
+
+.post li {
+color: #666;
+list-style-type: disc;
+}
+
+.post p {
+padding-bottom: 10px;
+}
+
+.post .date {
+font-size: 0.8em;
+font-style: italic;
+padding-bottom: 10px;
+margin-top: -20px;
+}
+
+.job-title-desc {
+color: #09C;
+}
+
+.job-city {
+color: #666;
+font-style: italic;
+}
+
+.job-date-red {
+color: #C00;
+text-align: center;
+margin-left: -30px;
+}
+
+.job-date-blue {
+color: #0099cc;
+text-align: center;
+margin-left: -30px;
+}
+
+#sidebar {
+float: right;
+width: 320px;
+}
+
+#sidebar h2 {
+background-color: #09C;
+color: white;
+text-transform: uppercase;
+font-size: 17px;
+padding: 10px;
+}
+
+/* #sidebar ul li ul li{
+background-color: #85C2E0;
+padding: 8px;
+color: white;
+margin-top: 2px;
+font-size:18px;
+background-image: url(images/category-arrow.png);
+background-repeat: no-repeat;
+background-position: 95%;
+padding-right: 20px;
+} */
+
+#sidebar li.children{
+background-color: #85C2E0;
+padding: 8px;
+color: white;
+margin-top: 2px;
+font-size:18px;
+background-image: url(images/category-arrow.png);
+background-repeat: no-repeat;
+background-position: 95%;
+padding-right: 20px;
+}
+
+#sidebar a {
+color:white;
+text-decoration:none;
+}
+
+#sidebar ul li ul li ul.children a {
+padding-left: 20px;
+}
+
+.avhec-widget-line {
+display: inline-block;
+background-color: #85C2E0;
+padding: 8px;
+color: white;
+margin-top: 2px;
+font-size: 18px;
+background-image: url(images/category-arrow.png);
+background-repeat: no-repeat;
+background-position: 95%;
+padding-right: 20px;
+width: 292px;
+}
+
+#our-sponsors {
+margin-top: 15px;
+border-top: 5px solid #39C;
+background-color:#000000;
+-moz-border-radius: 0 0 20px 20px; /* Firefox */
+-webkit-border-radius: 0 0 20px 20px; /* Safari, Chrome */
+border-radius: 0 0 20px 20px; /* CSS3 */
+behavior: url('border-radius.htc');
+}
+
+#our-sponsors h2 {
+background-color:#cc0000;
+}
+
+#our-sponsors img {
+padding-left: 20px;
+}
+
+#our-sponsors p {
+color: #39C;
+font-size: 18px;
+padding-left: 30px;
+padding-right: 30px;
+padding-bottom: 20px;
+padding-top: 10px;
+}
+
+#footer-separator {
+height: 55px;
+clear: both;
+border-bottom: 5px solid #CCC;
+}
+
+#footer {
+}
+
+.footer-navigation {
+margin-top: 25px;
+width: 260px;
+padding-bottom: 50px;
+float: left;
+padding-right: 80px;
+}
+
+.footer-navigation h2 {
+font-size: 18px;
+color: #666;
+padding-bottom: 20px;
+}
+
+.footer-navigation li {
+padding-bottom: 10px;
+padding-top: 10px;
+border-bottom: 1px solid #CCC;
+list-style: none;
+}
+
+.footer-navigation a {
+font-size: 15px;
+color: #666;
+text-decoration: none;
+}
+
+#contact-us {
+margin-top: 25px;
+float: right;
+width: 320px;
+}
+
+#contact-us li {
+padding-bottom: 10px;
+float: left;
+font-size: 18px;
+color: #666;
+padding-right: 7px;
+}
+
+#contact-us h2 {
+font-size: 18px;
+color: #666;
+padding-bottom: 30px;
+}
+
+#contact-us .grey {
+float: left;
+font-size:18px;
+color:#666666;
+padding-right: 7px;
+}
+
+#contact-us .blue {
+color: #39C;
+font-size: 18px;
+}
+
+#contact-us .blue a {
+color: #39C;
+text-decoration: none;
+}
+
+#contact-us .blue a:hover {
+text-decoration: underline;
+}
+
+#contact-us .follow-us {
+margin-top: 100px;
+}
+
+#contact-us .follow-us h2 {
+font-size: 16px;
+float: left;
+}
+
+#contact-us .follow-us ul {
+float: right;
+width: 220px;
+margin-top: -5px;
+}
+
+#contact-us .follow-us li {
+float: left;
+padding-left: 5px;
+padding-right: 5px;
+}
+
+#copyright {
+text-align: center;
+color: #999;
+font-size: 11px;
+padding-bottom: 20px;
+margin: 0 auto;
+margin-top: 240px;
+clear: both;
+}
+
+/*
+ * Include nivo-sliders own, default css to base everything on
+ */
+@import url('nivo-slider/nivo-slider.css');
+
+/*
+ * Plugin specific styles
+ */
+#slider {
+	position:relative;
+	width:100%;
+	height:330px;
+	background: url(images/loading.gif) no-repeat 50% 50%;
+}
+#slider img {
+	position:absolute;
+	top:0;
+	left:0;
+	display:none;
+}
+#slider a {
+	border:0;
+	display:block;
+}
+
+/*
+ * Overriding default nivo-slider styles for "blending in"
+ */
+.nivo-controlNav {
+        position: absolute;
+        bottom: -20px;
+		left: 47%;
+}
+.nivo-controlNav a {
+        background: url("images/bullets.png") no-repeat scroll 0 0 transparent;
+        border: 0 none;
+		display: block;
+        float: left;
+        height: 10px;
+        margin-right: 3px;
+        text-indent: -9999px;
+        width: 10px;
+}
+.nivo-controlNav a.active {
+        background-position: -10px 0;
+}
+.nivo-directionNav a {
+        background: url("images/arrows.png") no-repeat scroll 0 0 transparent;
+        border: 0 none;
+        display: block;
+        height: 30px;
+        text-indent: -9999px;
+        width: 30px;
+}
+a.nivo-nextNav {
+        background-position:-30px 0;
+        right:10px;
+}
+a.nivo-prevNav {
+        left:10px;
+}
+
+/*
+ * jQuery Nivo Slider v2.6
+ * http://nivo.dev7studios.com
+ *
+ * Copyright 2011, Gilbert Pellegrom
+ * Free to use and abuse under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ * 
+ * March 2010
+ */
+ 
+ 
+/* The Nivo Slider styles */
+.nivoSlider {
+	position:relative;
+}
+.nivoSlider img {
+	position:absolute;
+	top:0;
+	left:0;
+}
+/* If an image is wrapped in a link */
+.nivoSlider a.nivo-imageLink {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	border:0;
+	padding:0;
+	margin:0;
+	z-index:6;
+	display:none;
+}
+/* The slices and boxes in the Slider */
+.nivo-slice {
+	display:block;
+	position:absolute;
+	z-index:5;
+	height:100%;
+}
+.nivo-box {
+	display:block;
+	position:absolute;
+	z-index:5;
+}
+/* Caption styles */
+.nivo-caption {
+	position: absolute;
+	left: 420px;
+	bottom: -270px;
+	color: white;
+	width: 198px;
+	height: 100%;
+	z-index: 8;
+	background-image: url('images/find-out-more-bg-8.png');
+	background-repeat: no-repeat;
+}
+
+.nivo-zrtik {
+	position: absolute;
+	left: 420px;
+	bottom: -270px;
+	color: white;
+	width: 198px;
+	height: 100%;
+	z-index: 8;
+	background-image: url('images/find-out-more-8.png');
+	background-repeat: no-repeat;
+	font-size: 20px;
+	font-weight: bold;
+	margin: 0;
+	text-align: center;
+	padding-top: 13px;
+	text-indent: -9999px;
+	min-height: 49px;
+}
+
+.nivo-caption p {
+	padding:13px;
+	font-size:20px;
+	font-weight:bold;
+	margin:0;
+	text-align:center;
+}
+.nivo-caption a {
+	display:inline !important;
+}
+.nivo-html-caption {
+    display:none;
+}
+/* Direction nav styles (e.g. Next & Prev) */
+.nivo-directionNav a {
+	position:absolute;
+	top:45%;
+	z-index:9;
+	cursor:pointer;
+}
+.nivo-prevNav {
+	left:0;
+}
+.nivo-nextNav {
+	right:0;
+}
+/* Control nav styles (e.g. 1,2,3...) */
+.nivo-controlNav a {
+	position:relative;
+	z-index:9;
+	cursor:pointer;
+}
+.nivo-controlNav a.active {
+	font-weight:bold;
+}
+
+/* AVH Extended Categories Widget CSS */
+.avhec-widget-line {
+	display: inline-block;
+}
+
+.avhec-widget-count {
+	display: inline;
+}
+
+.avhec-widget-rss {
+	display: inline;
+}
+
+.footer_avhec {
+	font-size: 0.8em;
+	text-align: center;
+}
+
+div.clearer {
+	clear: both;
+	line-height: 1px;
+	font-size: 1px;
+	height: 1px;
+}
+
+/* Metabox in General */
+table.avhec-options {
+	font-size: 11px;
+}
+
+.avhec-metabox-wrap {
+	font-size: 11px;
+}
+
+.avhec-metabox-wrap .p {
+	font-size: 11px;
+	line-height: 140%;
+	margin: 1em 0;
+}
+
+#avhecBoxOptions option {
+	padding: .5em;
+}
+
+.avhec-metabox-wrap span.description {
+	font-size: 11px;
+}
+
+.avhec-metabox-wrap .b {
+	font-weight: bold;
+}
+
+.avhec-metabox-wrap ul {
+	margin-bottom: 1em;
+}
+
+.avhec-metabox-wrap ul li {
+	line-height: 120%;
+	list-style: disc inside none;
+	margin-bottom: 0;
+}
+
+#avhec-options input {
+	font-size: 11px;
+}
+
+#avhec-generaloptions input {
+	font-size: 11px;
+}
+
+/* Metabox FAQ */
+#avhecBoxFAQ .inside ul {
+	font-size: 11px;
+	margin-bottom: 6px;
+}
+#avhecBoxFAQ .inside ul li{
+	line-height: 120%;
+    list-style: disc inside none;
+    margin-bottom: 0;
+}
+
+/* Metabox Donations*/
+#avhecBoxDonations .inside {
+	font-size: 12px;
+}
+
+#avhecBoxDonations .versions {
+	padding: 6px 10px 12px;
+}
+
+/* Metabox Donations*/
+#avhecBoxTranslation .inside {
+	font-size: 12px;
+}
+
+/* Metabox in post and page */
+#post_avhec_category_group {
+	width: 100%;
+}
+
+#avhec-catlist {
+	-moz-border-radius: 4px 4px 4px 4px;
+	background-color: #FFFFFF;
+	border: 1px solid #DFDFDF;
+	height: 20em;
+	margin-bottom: -1.8em;
+	overflow: auto;
+	width: 95%;
+}
+
+#avhec-catlist ul {
+	padding: 3px;
+}
+
+#avhec-catlist li ul {
+	padding: 0;
+}
+
+#avhec-catlist li {
+	margin-bottom: 0;
+}
+
+/*************************************************
+*  This CSS file belongs to WP-Table Reloaded!   *
+*    DO NOT make any changes here, but in the    *
+* "Custom CSS" textarea in the "Plugin Options"! *
+*************************************************/
+
+.wp-table-reloaded .sorting {
+	background: #E6EEEE url(../img/bg.gif) no-repeat center right;
+	cursor: pointer;
+}
+.wp-table-reloaded .sorting_asc {
+	background: #8DBDD8 url(../img/asc.gif) no-repeat center right;
+}
+
+.wp-table-reloaded .sorting_desc {
+	background: #8DBDD8 url(../img/desc.gif) no-repeat center right;
+}
+
+.dataTables_wrapper {
+    position: relative;
+    zoom: 1;
+    min-height: 302px;
+	_height: 302px;
+	clear: both;
+}
+
+.dataTables_wrapper .wp-table-reloaded {
+    clear: both;
+}
+
+.dataTables_processing {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 250px;
+	margin-left: -125px;
+	border: 1px solid #ddd;
+	text-align: center;
+	color: #999;
+	font-size: 11px;
+	padding: 2px 0;
+}
+
+.dataTables_length {
+	width: 50%;
+	float: left;
+}
+
+.dataTables_filter {
+	width: 48%;
+	float: right;
+	text-align: right;
+}
+
+.dataTables_info {
+	width: 60%;
+	float: left;
+}
+
+.dataTables_paginate {
+	width: 44px;
+	* width: 50px;
+	float: right;
+	text-align: right;
+}
+
+.paginate_disabled_previous, .paginate_enabled_previous, .paginate_disabled_next, .paginate_enabled_next {
+	height: 19px;
+	width: 19px;
+	margin-left: 3px;
+	float: left;
+}
+
+.paginate_disabled_previous {
+	background-image: url(../img/back_disabled.jpg);
+}
+
+.paginate_enabled_previous {
+	background-image: url(../img/back_enabled.jpg);
+}
+
+.paginate_disabled_next {
+	background-image: url(../img/forward_disabled.jpg);
+}
+
+.paginate_enabled_next {
+	background-image: url(../img/forward_enabled.jpg);
+}
+
+.paging_full_numbers {
+	width: 400px;
+	height: 22px;
+	line-height: 22px;
+}
+
+.paging_full_numbers span.paginate_button, .paging_full_numbers span.paginate_active {
+	border: 1px solid #aaa;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	padding: 2px 5px;
+	margin: 0 3px;
+	cursor: pointer;
+	*cursor: hand;
+}
+
+.paging_full_numbers span.paginate_button {
+	background-color: #ddd;
+}
+
+.paging_full_numbers span.paginate_button:hover {
+	background-color: #ccc;
+}
+
+.paging_full_numbers span.paginate_active {
+	background-color: #99B3FF;
+}
+
+/*************************************************
+*  This CSS file belongs to WP-Table Reloaded!   *
+*  DO NOT make any changes here, add them to the *
+* "Custom CSS" textarea in the "Plugin Options"! *
+*************************************************/
+
+.wp-table-reloaded {
+	border-collapse: separate;
+	background-color: #CDCDCD;
+	margin: 10px 0 15px 0;
+	font-size: 8pt;
+	width: 100%;
+	text-align: left;
+}
+.wp-table-reloaded th {
+	background-color: black;
+	padding: 4px;
+	color: white!important;
+	font-size: 14px;
+	padding-left: 20px;
+}
+.wp-table-reloaded td {
+	color: black;
+	padding: 4px;
+	background-color: white;
+	vertical-align: top;
+	font-size: 14px;
+	padding-left: 20px;
+	border-bottom: 1px solid #5E7676;
+}
+.wp-table-reloaded .even td {
+	background-color: #FFFFFF;
+}
+.wp-table-reloaded .odd td {
+	background-color: #F0F0F6;
+}
+.wp-table-reloaded .row-hover tr:hover td {
+	background-color: #D0D0D6!important;
+}
+.wp-table-reloaded-table-description {
+	clear: both;
+	display: block;
+}
+
+/*************************************************
+*  This CSS file belongs to WP-Table Reloaded!   *
+*  DO NOT make any changes here, add them to the *
+* "Custom CSS" textarea in the "Plugin Options"! *
+*************************************************/
+
+.wp-table-reloaded {
+	direction: rtl;
+	text-align: right;	
+}
+
+/*************************************************
+*  This CSS file belongs to WP-Table Reloaded!   *
+*    DO NOT make any changes here, but in the    *
+* "Custom CSS" textarea in the "Plugin Options"! *
+*************************************************/
+
+.wp-table-reloaded .header {
+	background: #E6EEEE url(../img/bg.gif) no-repeat center right;
+	cursor: pointer;
+}
+.wp-table-reloaded .headerSortUp {
+	background: #8DBDD8 url(../img/asc.gif) no-repeat center right;
+}
+
+.wp-table-reloaded .headerSortDown {
+	background: #8DBDD8 url(../img/desc.gif) no-repeat center right;
+}
